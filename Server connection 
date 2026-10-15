@@ -1,0 +1,13 @@
+import mysql.connector
+
+
+def connecting_database():
+    """Return a fresh connection each time (routes close it when done)."""
+    return mysql.connector.connect(
+        host="Your Host",
+        user="Your username",
+        password="Your password",
+        database="Grocery_store_db",
+        port=3306,
+    )
+    
